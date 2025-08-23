@@ -40,7 +40,7 @@ export function MainProduct() {
       </div>
       <div>
         <img
-          className="h-100 rounded-tr-full rounded-bl-full"
+          className="h-100 rounded-tr-full rounded-bl-full object-cover"
           src={mainCoke}
           alt=""
         />
