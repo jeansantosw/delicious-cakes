@@ -4,7 +4,7 @@ import { Button } from '../ui/button'
 
 export function Header() {
   return (
-    <header className="flex justify-between">
+    <header className="flex justify-between py-16">
       <div>LOGO</div>
       <div className="flex items-center gap-3">
         <Button
