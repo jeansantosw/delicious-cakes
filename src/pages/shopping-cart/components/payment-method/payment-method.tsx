@@ -2,7 +2,12 @@ import { Banknote, CreditCard, DollarSign, Landmark } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
 
-export function PaymentMethod() {
+import type { IPaymentMethod } from '../../types'
+
+export function PaymentMethod({
+  onPaymentClick,
+  deliveryAddress,
+}: IPaymentMethod) {
   return (
     <div className="flex flex-col space-y-8 p-10">
       <div>

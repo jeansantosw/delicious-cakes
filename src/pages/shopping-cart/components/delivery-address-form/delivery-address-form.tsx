@@ -2,7 +2,9 @@ import { MapPinHouse } from 'lucide-react'
 
 import { Input } from '@/components/ui/input'
 
-export function DeliveryAddressForm() {
+import type { IDeliveryAddressForm } from '../../types'
+
+export function DeliveryAddressForm({ registry }: IDeliveryAddressForm) {
   return (
     <form className="p-10">
       <div className="flex items-center gap-6 pb-9">
@@ -24,7 +26,7 @@ export function DeliveryAddressForm() {
       <div className="flex flex-col space-y-4">
         <div className="flex gap-3">
           <Input
-            id="house-number"
+            id="houseNumber"
             type="text"
             placeholder="Número"
             autoComplete="off"
