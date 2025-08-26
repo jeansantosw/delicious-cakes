@@ -8,6 +8,7 @@ export const deliveryAddressFormSchema = z.object({
   complement: z.string(),
   neighborhood: z.string(),
   city: z.string(),
+  uf: z.string(),
 })
 
 export type TDeliveryAddressForm = z.infer<typeof deliveryAddressFormSchema>
