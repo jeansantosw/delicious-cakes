@@ -14,10 +14,11 @@ export function ShoppingCart() {
     'complement',
     'neighborhood',
     'city',
+    'uf',
   ])
 
   function handleSubmiPayment(data: TDeliveryAddressForm) {
-    console.log(data)
+    console.log(':', data)
   }
 
   return (

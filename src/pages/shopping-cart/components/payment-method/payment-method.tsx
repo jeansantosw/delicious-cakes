@@ -30,8 +30,6 @@ export function PaymentMethod({
 
   const isSelected = (value: string) => selectdPayment === value
 
-  console.log(isSelected)
-
   return (
     <div className="flex flex-col space-y-8 p-10">
       <div>
@@ -42,24 +40,30 @@ export function PaymentMethod({
           O pagamento é feito na entrega. Escolha a forma que deseja pagar
         </span>
       </div>
-      <div className="flex w-full justify-between">
+      <div className="flex w-full gap-4">
         <Button
+          type="button"
           onClick={() => handlePaymentClick('Cartão de Crédito')}
-          className="h-14 w-44 bg-neutral-200 text-xs font-semibold text-neutral-600 uppercase hover:bg-neutral-300"
+          className={`h-14 w-44 text-xs font-semibold uppercase ${isSelected('Cartão de Crédito') ? 'bg-purple-300 text-black' : 'bg-neutral-200 text-neutral-600 hover:bg-neutral-300'} `}
+          disabled={isSelected('Cartão de Crédito')}
         >
           {' '}
           <CreditCard size={20} className="text-purple-800" /> Cartão de Crédito
         </Button>
         <Button
+          type="button"
           onClick={() => handlePaymentClick('Cartão de Débito')}
-          className="h-14 w-44 bg-neutral-200 text-xs font-semibold text-neutral-600 uppercase hover:bg-neutral-300"
+          className={`h-14 w-44 text-xs font-semibold uppercase ${isSelected('Cartão de Débito') ? 'bg-purple-300 text-black' : 'bg-neutral-200 text-neutral-600 hover:bg-neutral-300'} `}
+          disabled={isSelected('Cartão de Débito')}
         >
           {' '}
           <Landmark size={20} className="text-purple-800" /> Cartão de Débito
         </Button>
         <Button
+          type="button"
           onClick={() => handlePaymentClick('Dinheiro')}
-          className="h-14 w-44 bg-neutral-200 text-xs font-semibold text-neutral-600 uppercase hover:bg-neutral-300"
+          className={`h-14 w-44 text-xs font-semibold uppercase ${isSelected('Dinheiro') ? 'bg-purple-300 text-black' : 'bg-neutral-200 text-neutral-600 hover:bg-neutral-300'} `}
+          disabled={isSelected('Dinheiro')}
         >
           <Banknote size={20} className="text-purple-800" />
           Dinheiro
