@@ -2,6 +2,7 @@ import { useForm } from 'react-hook-form'
 
 import { DeliveryAddressForm } from './components/delivery-address-form/delivery-address-form'
 import { PaymentMethod } from './components/payment-method/payment-method'
+import { SelectedCakes } from './components/selected-cakes/selected-cakes'
 import type { TDeliveryAddressForm } from './types'
 
 export function ShoppingCart() {
@@ -32,7 +33,8 @@ export function ShoppingCart() {
         />
       </div>
       <div className="flex-1">
-        <h2>Cakes selecionados</h2>
+        <h2 className="text-xl">Cakes selecionados</h2>
+        <SelectedCakes />
       </div>
     </div>
   )
